@@ -144,20 +144,6 @@ if (process.env.REDIS_URL) {
 }
 ```
 
-## 🚀 Why This Approach Works
-
-### For Small Teams:
-- **Lower complexity**: No Redis to manage
-- **Lower cost**: Single server deployment
-- **Better performance**: In-memory is faster than Redis for small scale
-- **Easier debugging**: All state in one place
-
-### Growth Path:
-- **Add Redis later**: When you hit memory limits
-- **Horizontal scaling**: When you need multiple servers
-- **CDN for assets**: When file storage becomes a bottleneck
-- **Advanced features**: Templates, analytics, etc.
-
 ## 🎛️ Configuration Levels
 
 ### Basic (Family/Personal):
@@ -182,75 +168,3 @@ MULTIPLE_DATABASES=true
 LOAD_BALANCER=true
 ANALYTICS=true
 ```
-
-## 🔧 Implementation Priority
-
-### Phase 1: Core (Weeks 1-2)
-```
-✅ Fastify server with static React serving
-✅ Basic Lucia authentication
-✅ PostgreSQL + Prisma setup
-✅ Single room tldraw integration
-```
-
-### Phase 2: Multi-user (Week 3)
-```
-✅ WebSocket room management
-✅ Real-time collaboration
-✅ User presence
-✅ File uploads (local storage)
-```
-
-### Phase 3: Polish (Week 4)
-```
-✅ Docker deployment
-✅ Room management UI
-✅ Invite system
-✅ Basic admin panel
-```
-
-### Phase 4: Scale Options (Later)
-```
-🔄 Redis integration (optional)
-🔄 S3/R2 storage (optional)
-🔄 Advanced permissions
-🔄 Analytics/monitoring
-```
-
-## 💡 Key Benefits of This Approach
-
-### For Solo Developer (You):
-- **Fast development**: Simple architecture, fewer moving parts
-- **Easy testing**: Everything runs locally
-- **Clear debugging**: Single server, clear data flow
-
-### For End Users:
-- **Simple deployment**: `docker-compose up` and you're done
-- **Low resource usage**: Runs on $5/month VPS
-- **Data ownership**: Everything self-hosted
-- **Privacy**: No third-party services required
-
-### For Future Growth:
-- **Clear upgrade path**: Add Redis/scaling when needed
-- **Modular design**: Easy to add features
-- **Team adoption**: Simple for small teams to start using
-
-## ❓ Key Decision Points
-
-### 1. **File Storage**:
-- Start: Local filesystem (`./uploads`)
-- Scale: S3/R2 when needed
-
-### 2. **Real-time State**:
-- Start: In-memory Map/Set
-- Scale: Redis when needed
-
-### 3. **Database**:
-- Start: Single PostgreSQL
-- Scale: Read replicas when needed
-
-### 4. **Deployment**:
-- Start: Docker Compose
-- Scale: Kubernetes/cloud when needed
-
-This gives you a **solid foundation** that's **simple to start** but has a **clear path to scale** when your userbase grows!
