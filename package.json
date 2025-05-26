@@ -1,5 +1,5 @@
 {
-  "name": "kitchen-sink",
+  "name": "tidraw",
   "private": true,
   "scripts": {
     "build": "turbo run build",
