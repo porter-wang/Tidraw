@@ -1,8 +1,9 @@
 # (Draft) Architecture for Tidraw
 
+Default Settings is:
 ```
 Frontend:  React.js (with Vite for development speed)
-Database:  PostgreSQL + Prisma (single database, simple)
+Database:  SQLite + Prisma (single database, simple)
 Backend:   Fastify (API + WebSocket for tldraw/sync-core)
 Auth:      Lucia (lightweight, self-contained)
 ```
