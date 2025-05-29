@@ -11,9 +11,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+/**
+ * User Model
+ */
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  posts Post[]
+  id        Int     @id @default(autoincrement())
+  email     String  @unique
+  firstName String?
+  lastName  String?
+  isAdmin   Boolean @default(false)
 }
