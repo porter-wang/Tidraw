@@ -2,8 +2,9 @@
 
 ### Phase 1: Core (Weeks 1-2)
 - [ ] Fastify server with static React serving
-- [ ] Basic Lucia authentication
-- [ ] SQLite + Prisma setup
+- [ ] Basic authentication for users (starting with just the admin itself)
+- [ ] First-time-run Setup
+- [ ] SQLite + Prisma schema and migration
 - [ ] Single room tldraw integration
 
 ### Phase 2: Multi-user (Week 3)

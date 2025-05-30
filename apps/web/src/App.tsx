@@ -1,9 +1,9 @@
 // apps/frontend/src/App.tsx
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Pages
-import Login from "./pages/Login";
+import Login from "./components/Login";
 import Dashboard from "./pages/Dashboard";
 import Setup from "./pages/Setup";
 import Loading from "./components/Loading";
@@ -21,12 +21,9 @@ import "./App.css";
       2. Check authentication status
         - If not logged in -> Login page  
       3. If logged in -> Dashboard (or specific room)
-
 */
 
 function App() {
-
-
   return <></>;
 }
 
