@@ -1,0 +1,23 @@
+{
+  "name": "@tidraw/backend",
+  "module": "prisma.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun prisma.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "@types/node": "^22.15.21",
+    "fastify": "^5.3.3",
+    "fastify-cli": "^7.4.0",
+    "prisma": "^6.8.2",
+    "tsx": "^4.19.4"
+  }
+}
