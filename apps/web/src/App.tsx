@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Pages
 import Login from "./components/Login";
+import Loading from "./components/Loading";
 import Dashboard from "./pages/Dashboard";
 import Setup from "./pages/Setup";
-import Loading from "./components/Loading";
 
 // Hooks
 import { useAuth } from "./hooks/useAuth";

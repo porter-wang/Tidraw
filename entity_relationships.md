@@ -23,10 +23,10 @@
 For Each Board:
 
 - Has unique ID, incremented by the DB (regardless of whose Board this is)
-- Has a unique field for storing **_Editor State_** (most likely in the form of serialized JSON which are snapshots)
+- Has a unique field for storing **_Editor State_** (according to Tldraw's documentation, should be in the form of serialized JSON)
   > see [Tldraw.dev's doc on Persistence Key](https://tldraw.dev/docs/persistence) to work with Tldraw's Editor: get the board also means getting the persistence key and passing that key to the Tldraw Editor Instances
 - Has a _Boolean_ state to indicate whether this board has _Collaboration_ going on
   > Collaboration means either shared to/from other users
 
 
-## TODO: Think about the rest of the design
+## TODO: Think about the rest of the design, and normalize them into proper relational database suitable schemas
