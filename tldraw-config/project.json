@@ -1,0 +1,19 @@
+{
+  "name": "tldraw-config",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tldraw-config/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tldraw-config",
+        "main": "tldraw-config/src/index.ts",
+        "tsConfig": "tldraw-config/tsconfig.lib.json",
+        "assets": ["tldraw-config/*.md"]
+      }
+    }
+  }
+}
