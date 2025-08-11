@@ -1,20 +1,17 @@
-import Login from "./pages/Login";
-
-import "./App.css";
-
-/*  Landing Page
-      If initialization is ongoing:
-        Go to Sign-Up page (Unless user manually created already using configuration file)
-      If not logged in:
-        Go to Login
-      If logged in:
-        Go to Dashboard
-*/
+import { Tldraw } from 'tldraw'
+import { useSyncDemo } from '@tldraw/sync'
 
 function App() {
+  // For now, use the demo sync - we'll replace this with our own backend later
+  const store = useSyncDemo({ 
+    roomId: 'dev-room-' + Math.random().toString(36).substring(7) 
+  })
 
-
-  return <></>;
+  return (
+    <div style={{ position: 'fixed', inset: 0 }}>
+      <Tldraw store={store} />
+    </div>
+  )
 }
 
-export default App;
+export default App
